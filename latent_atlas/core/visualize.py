@@ -167,7 +167,7 @@ def plot_tsne_visualization(
         (tsne_results, metrics)
     """
     data = load_latent_data(safetensor_files, cache_file, sample_num)
-    tsne = TSNE(n_components=n_components, random_state=42, perplexity=perplexity, n_iter=n_iter)
+    tsne = TSNE(n_components=n_components, random_state=42, perplexity=perplexity, max_iter=n_iter)
     tsne_results = tsne.fit_transform(data.numpy())
     metrics = calculate_uniformity_metrics(tsne_results)
 

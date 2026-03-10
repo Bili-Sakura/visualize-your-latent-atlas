@@ -4,6 +4,14 @@ Explore VAE latent spaces with t-SNE visualization. Extract latents from any ima
 
 [![Hugging Face Spaces](https://img.shields.io/badge/🤗%20Hugging%20Face-Spaces-yellow)](https://huggingface.co/spaces)
 
+<p align="center">
+  <img src="latent_demos/latent_tsne_f16d32.png" width="48%" />
+  <img src="latent_demos/latent_tsne_f16d32_vfdinov2.png" width="48%" />
+</p>
+<p align="center">
+  <sub><b>Left:</b> LDM f16d32 · <b>Right:</b> VA-VAE f16d32 (DINOv2) — from <a href="https://github.com/hustvl/LightningDiT">LightningDiT</a></sub>
+</p>
+
 ## Features
 
 - **Flexible VAE registry**: Add any diffusers-based VAE via `config.yaml` (HuggingFace Hub or local path)

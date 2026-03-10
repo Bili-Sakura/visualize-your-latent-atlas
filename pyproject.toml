@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "visualize-your-latent-atlas"
+version = "0.1.0"
+description = "Extract VAE latents and visualize latent space with t-SNE"
+readme = "README.md"
+license = {text = "GPL-3.0"}
+requires-python = ">=3.9"
+authors = [{name = "Visualize Your Latent Atlas Contributors"}]
+keywords = ["vae", "latent", "tsne", "visualization", "diffusers"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+]
+
+dependencies = [
+    "torch>=2.0",
+    "torchvision>=0.15",
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "scikit-learn>=1.2",
+    "matplotlib>=3.7",
+    "tqdm>=4.65",
+    "safetensors>=0.4",
+    "PyYAML>=6.0",
+    "diffusers>=0.25",
+    "transformers>=4.30",
+    "gradio>=4.0",
+    "huggingface-hub>=0.17",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.1"]
+full = ["accelerate>=0.20"]
+
+
+[project.urls]
+Repository = "https://github.com/your-org/visualize-your-latent-atlas"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["latent_atlas*"]

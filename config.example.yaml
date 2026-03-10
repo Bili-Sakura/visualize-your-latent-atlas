@@ -1,0 +1,30 @@
+# =============================================================================
+# Example Configuration - Copy to config.yaml and customize
+# =============================================================================
+# Add your VAE models and datasets here. Paths can be local or HuggingFace Hub IDs.
+
+vaes:
+  SD21-VAE:
+    pretrained_path: stabilityai/sd-vae-ft-mse
+    scaling_factor: 0.18215
+    latent_channels: 4
+    spatial_compression: 8
+
+  # Local path example:
+  # My-VAE:
+  #   pretrained_path: /path/to/my/vae
+  #   scaling_factor: 0.18215
+  #   latent_channels: 4
+  #   spatial_compression: 8
+
+datasets:
+  my_dataset:
+    root: /path/to/image/folder
+    image_size: 256
+    num_classes: null
+
+defaults:
+  sample_num: 10000
+  batch_size: 16
+  num_workers: 4
+  seed: 42
